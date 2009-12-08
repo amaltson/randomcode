@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- Register the GWT specific beans. -->
+	<!--
+		Register the UrlHandlerMapping that will handle mapping requests to
+		the appropriate @GwtRpcEndPoint annotated @Controller.
+	-->
+	<bean class="org.gwtaf.command.server.gwt.GwtAnnotationHandlerMapping">
+		<property name="prefix" value="/gwt-rpc/" />
+		<property name="order" value="0" />
+		<property name="alwaysUseFullPath" value="true" />
+	</bean>
+
+	<!--
+		Register the class that will make @GwtRpcEndPoint @Controllers become
+		RemoteServiceServlets.
+	-->
+	<bean class="org.gwtaf.command.server.gwt.GwtRpcEndPointHandlerAdapter" />
+</beans>
