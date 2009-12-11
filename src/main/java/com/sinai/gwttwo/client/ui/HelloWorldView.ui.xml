@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:gwttwo="urn:import:com.sinai.gwttwo.client.ui">
+	<ui:style src='MyUi.css' />
+		
+	<g:HTMLPanel>
+		<g:Label ui:field="label">Some Label</g:Label>
+		<div><gwttwo:World ui:field="world" /></div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

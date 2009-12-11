@@ -44,6 +44,17 @@
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.google.code.gin</groupId>
+			<artifactId>google-gin</artifactId>
+			<version>0.117.svn</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.guice</groupId>
+			<artifactId>guice</artifactId>
+			<version>2.0</version>
+		</dependency>
+
 		<!-- test -->
 		<dependency>
 			<groupId>junit</groupId>

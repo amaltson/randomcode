@@ -4,7 +4,8 @@
 	<!-- Inherit the core Web Toolkit stuff.                        -->
 	<inherits name='com.google.gwt.user.User' />
 	<inherits name='com.google.gwt.rpc.RPC' />
-	<inherits name="org.gwtaf.GwtAfCommand"/>
+	<inherits name="org.gwtaf.GwtAfCommand" />
+	<inherits name="com.google.gwt.inject.Inject" />
 
 	<!--  inherit css based theme -->
 	<inherits name='com.google.gwt.user.theme.standard.Standard' />

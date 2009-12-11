@@ -15,22 +15,25 @@
  */
 package com.sinai.gwttwo.client.ui;
 
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.HasText;
+import com.google.inject.Inject;
 
-public class HelloWorld extends Composite {
+public class HelloWorldPresenter {
 
-	private static HelloWorldUiBinder uiBinder =
-			GWT.create(HelloWorldUiBinder.class);
+	public interface Display {
+		HasText getLabel();
 
-	interface HelloWorldUiBinder extends UiBinder<Widget, HelloWorld> {
+		World getWorld();
 	}
 
+	private HelloWorldPresenter.Display display;
 
-	public HelloWorld(String... names) {
-		initWidget(uiBinder.createAndBindUi(this));
+	@Inject
+	public HelloWorldPresenter(HelloWorldPresenter.Display display) {
+		this.display = display;
 	}
 
+	public HelloWorldPresenter.Display getDisplay() {
+		return display;
+	}
 }
