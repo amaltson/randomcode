@@ -23,7 +23,7 @@ public class HelloWorldPresenter {
 	public interface Display {
 		HasText getLabel();
 
-		World getWorld();
+		WorldPresenter.Display getWorld();
 	}
 
 	private HelloWorldPresenter.Display display;

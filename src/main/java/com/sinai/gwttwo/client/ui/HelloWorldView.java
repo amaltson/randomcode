@@ -37,10 +37,10 @@ public class HelloWorldView extends Composite implements
 	Label label;
 	
 	@UiField(provided = true)
-	World world;
+	WorldPresenter.Display world;
 
 	@Inject
-	public HelloWorldView(World world) {
+	public HelloWorldView(WorldPresenter.Display world) {
 		this.world = world;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
@@ -49,7 +49,7 @@ public class HelloWorldView extends Composite implements
 		return label;
 	}
 
-	public World getWorld() {
+	public WorldPresenter.Display getWorld() {
 		return world;
 	}
 }
