@@ -11,17 +11,17 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class World extends Composite implements WorldPresenter.Display {
+public class AccountView extends Composite implements AccountPresenter.Display {
 
 	private static WorldUiBinder uiBinder = GWT.create(WorldUiBinder.class);
 
-	interface WorldUiBinder extends UiBinder<Widget, World> {
+	interface WorldUiBinder extends UiBinder<Widget, AccountView> {
 	}
 
 	@UiField
 	Button button;
 
-	public World() {
+	public AccountView() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 

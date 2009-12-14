@@ -3,22 +3,22 @@ package com.sinai.gwttwo.client.ui;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.inject.Inject;
 
-public class HelloWorldPresenter {
+public class PersonPresenter {
 
 	public interface Display {
 		HasText getButton();
 
-		WorldPresenter.Display getWorld();
+		AccountPresenter.Display getWorld();
 	}
 
-	private HelloWorldPresenter.Display display;
+	private PersonPresenter.Display display;
 
 	@Inject
-	public HelloWorldPresenter(HelloWorldPresenter.Display display) {
+	public PersonPresenter(PersonPresenter.Display display) {
 		this.display = display;
 	}
 
-	public HelloWorldPresenter.Display getDisplay() {
+	public PersonPresenter.Display getDisplay() {
 		return display;
 	}
 }

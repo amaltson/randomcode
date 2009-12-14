@@ -5,33 +5,32 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
-import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 
-public class HelloWorldView extends Composite implements
-		HelloWorldPresenter.Display {
+public class PersonView extends Composite implements
+		PersonPresenter.Display {
 
 	private static HelloWorldUiBinder uiBinder =
 			GWT.create(HelloWorldUiBinder.class);
 
-	interface HelloWorldUiBinder extends UiBinder<Widget, HelloWorldView> {
+	interface HelloWorldUiBinder extends UiBinder<Widget, PersonView> {
 	}
 
 	@UiField(provided = true)
-	WorldPresenter.Display world;
+	AccountPresenter.Display account;
 	
 	@UiField
 	HasText button;
 
 	@Inject
-	public HelloWorldView(WorldPresenter.Display world) {
-		this.world = world;
+	public PersonView(AccountPresenter.Display world) {
+		this.account = world;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	public WorldPresenter.Display getWorld() {
-		return world;
+	public AccountPresenter.Display getWorld() {
+		return account;
 	}
 
 	public HasText getButton() {

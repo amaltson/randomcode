@@ -4,7 +4,7 @@
 	<ui:style src='MyUi.css' />
 		
 	<g:HTMLPanel>
-		<div><gwttwo:World ui:field="world" /></div>
+		<div><gwttwo:AccountView ui:field="account" /></div>
 		<div><g:Button ui:field="button" />Some Button</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 
