@@ -8,13 +8,15 @@ public class PersonPresenter {
 	public interface Display {
 		HasText getButton();
 
-		AccountPresenter.Display getWorld();
+		void setAccount(AccountPresenter.Display accountDisplay);
 	}
 
 	private PersonPresenter.Display display;
 
 	@Inject
-	public PersonPresenter(PersonPresenter.Display display) {
+	public PersonPresenter(PersonPresenter.Display display,
+			AccountPresenter accountPresenter) {
+		display.setAccount(accountPresenter.getDisplay());
 		this.display = display;
 	}
 

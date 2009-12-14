@@ -6,10 +6,9 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Widget;
-import com.google.inject.Inject;
+import com.sinai.gwttwo.client.ui.AccountPresenter.Display;
 
-public class PersonView extends Composite implements
-		PersonPresenter.Display {
+public class PersonView extends Composite implements PersonPresenter.Display {
 
 	private static HelloWorldUiBinder uiBinder =
 			GWT.create(HelloWorldUiBinder.class);
@@ -19,21 +18,19 @@ public class PersonView extends Composite implements
 
 	@UiField(provided = true)
 	AccountPresenter.Display account;
-	
+
 	@UiField
 	HasText button;
 
-	@Inject
-	public PersonView(AccountPresenter.Display world) {
-		this.account = world;
+	public PersonView() {
 		initWidget(uiBinder.createAndBindUi(this));
-	}
-
-	public AccountPresenter.Display getWorld() {
-		return account;
 	}
 
 	public HasText getButton() {
 		return button;
+	}
+
+	public void setAccount(Display accountDisplay) {
+		this.account = accountDisplay;
 	}
 }
