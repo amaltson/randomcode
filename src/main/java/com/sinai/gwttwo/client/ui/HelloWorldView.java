@@ -18,9 +18,6 @@ public class HelloWorldView extends Composite implements
 	interface HelloWorldUiBinder extends UiBinder<Widget, HelloWorldView> {
 	}
 
-	@UiField
-	Label label;
-	
 	@UiField(provided = true)
 	WorldPresenter.Display world;
 	
@@ -29,16 +26,15 @@ public class HelloWorldView extends Composite implements
 
 	@Inject
 	public HelloWorldView(WorldPresenter.Display world) {
-		System.out.println(world);
 		this.world = world;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
-	public HasText getLabel() {
-		return label;
-	}
-
 	public WorldPresenter.Display getWorld() {
 		return world;
+	}
+
+	public HasText getButton() {
+		return button;
 	}
 }

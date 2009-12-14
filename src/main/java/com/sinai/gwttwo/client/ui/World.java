@@ -33,12 +33,4 @@ public class World extends Composite implements WorldPresenter.Display {
 	public HasClickHandlers getButton() {
 		return button;
 	}
-
-	public String getText() {
-		return null;
-	}
-
-	public void setText(String arg0) {
-		
-	}
 }

@@ -6,7 +6,7 @@ import com.google.inject.Inject;
 public class HelloWorldPresenter {
 
 	public interface Display {
-		HasText getLabel();
+		HasText getButton();
 
 		WorldPresenter.Display getWorld();
 	}

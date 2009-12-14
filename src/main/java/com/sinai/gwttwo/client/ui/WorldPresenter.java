@@ -6,7 +6,7 @@ import com.google.inject.Inject;
 
 public class WorldPresenter {
 
-	public interface Display extends HasText {
+	public interface Display {
 		HasClickHandlers getButton();
 	}
 

@@ -4,8 +4,7 @@
 	<ui:style src='MyUi.css' />
 		
 	<g:HTMLPanel>
-		<g:Label ui:field="label">Some Label</g:Label>
 		<div><gwttwo:World ui:field="world" /></div>
-		<div><g:Button ui:field="button" /></div>
+		<div><g:Button ui:field="button" />Some Button</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 
