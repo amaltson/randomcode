@@ -19,6 +19,7 @@ public class PersonView extends Composite {
 	HasText button;
 
 	public PersonView(HasText someText) {
+		this.button = someText;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
