@@ -6,5 +6,6 @@
 	<g:HTMLPanel>
 		<g:Label ui:field="label">Some Label</g:Label>
 		<div><gwttwo:World ui:field="world" /></div>
+		<div><g:Button ui:field="button" /></div>
 	</g:HTMLPanel>
 </ui:UiBinder> 
