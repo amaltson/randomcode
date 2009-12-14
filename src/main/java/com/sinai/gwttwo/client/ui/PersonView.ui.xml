@@ -1,10 +1,8 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:gwttwo="urn:import:com.sinai.gwttwo.client.ui">
-	<ui:style src='MyUi.css' />
-		
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
 	<g:HTMLPanel>
-		<div><gwttwo:AccountView ui:field="account" /></div>
 		<div><g:Button ui:field="button" />Some Button</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

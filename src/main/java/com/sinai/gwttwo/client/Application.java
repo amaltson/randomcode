@@ -1,24 +1,15 @@
 package com.sinai.gwttwo.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.Widget;
-import com.sinai.gwttwo.client.ui.PersonGinjector;
-import com.sinai.gwttwo.client.ui.PersonPresenter;
+import com.sinai.gwttwo.client.ui.PersonView;
 
-/**
- * Entry point classes define <code>onModuleLoad()</code>.
- */
 public class Application implements EntryPoint {
 
-	/**
-	 * This is the entry point method.
-	 */
 	public void onModuleLoad() {
-		PersonGinjector injector = GWT.create(PersonGinjector.class);
-		PersonPresenter personPresenter = injector.getPresenter();
 		
-		RootPanel.get().add((Widget) personPresenter.getDisplay());
+		PersonView personView = new PersonView(new Button());
+		RootPanel.get().add(personView);
 	}
 }

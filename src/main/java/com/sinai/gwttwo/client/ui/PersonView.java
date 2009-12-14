@@ -7,7 +7,7 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Widget;
 
-public class PersonView extends Composite implements PersonPresenter.Display {
+public class PersonView extends Composite {
 
 	private static HelloWorldUiBinder uiBinder =
 			GWT.create(HelloWorldUiBinder.class);
@@ -16,20 +16,13 @@ public class PersonView extends Composite implements PersonPresenter.Display {
 	}
 
 	@UiField(provided = true)
-	AccountPresenter.Display account;
-
-	@UiField
 	HasText button;
 
-	public PersonView() {
+	public PersonView(HasText someText) {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
 	public HasText getButton() {
 		return button;
-	}
-
-	public void setAccount(AccountPresenter.Display accountDisplay) {
-		this.account = accountDisplay;
 	}
 }
