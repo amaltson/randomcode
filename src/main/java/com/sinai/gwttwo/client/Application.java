@@ -17,8 +17,8 @@ public class Application implements EntryPoint {
 	 */
 	public void onModuleLoad() {
 		PersonGinjector injector = GWT.create(PersonGinjector.class);
-		PersonPresenter presenter = injector.getPresenter();
-
-		RootPanel.get().add((Widget) presenter.getDisplay());
+		PersonPresenter personPresenter = injector.getPresenter();
+		
+		RootPanel.get().add((Widget) personPresenter.getDisplay());
 	}
 }

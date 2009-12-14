@@ -6,7 +6,6 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Widget;
-import com.sinai.gwttwo.client.ui.AccountPresenter.Display;
 
 public class PersonView extends Composite implements PersonPresenter.Display {
 
@@ -30,7 +29,7 @@ public class PersonView extends Composite implements PersonPresenter.Display {
 		return button;
 	}
 
-	public void setAccount(Display accountDisplay) {
+	public void setAccount(AccountPresenter.Display accountDisplay) {
 		this.account = accountDisplay;
 	}
 }
