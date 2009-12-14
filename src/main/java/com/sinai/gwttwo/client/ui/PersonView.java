@@ -16,14 +16,14 @@ public class PersonView extends Composite {
 	}
 
 	@UiField(provided = true)
-	HasText button;
+	Widget button;
 
 	public PersonView(HasText someText) {
-		this.button = someText;
+		this.button = (Widget) someText;
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
 	public HasText getButton() {
-		return button;
+		return (HasText) button;
 	}
 }

@@ -3,6 +3,6 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
 	<g:HTMLPanel>
-		<div><g:Button ui:field="button" />Some Button</div>
+		<g:Widget ui:field="button" />
 	</g:HTMLPanel>
 </ui:UiBinder> 
